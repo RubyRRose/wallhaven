@@ -52,7 +52,7 @@ def main():
 
 
 def downloadPicP(urlPeople, headers, session):
-    print("People开始")
+    print("PeopleStart")
     resp = session.get(urlPeople, headers=headers)
     resp.encoding = 'utf-8'
     main_page = BeautifulSoup(resp.text, "html.parser")
@@ -79,7 +79,7 @@ def downloadPicP(urlPeople, headers, session):
 
 def downloadPicsP(headers, countP, urlPeople, session):
     url = urlPeople + '&page={0}'.format(countP)
-    print("第{0}页开始".format(countP))
+    print("page{0}start".format(countP))
     resp = session.get(url, headers=headers)
     resp.encoding = 'utf-8'
     main_page = BeautifulSoup(resp.text, "html.parser")
@@ -108,7 +108,7 @@ def downloadPicsP(headers, countP, urlPeople, session):
 
 
 def downloadPicA(urlAnimi, headers, session):
-    print("Animi开始")
+    print("AnimiStart")
     resp = session.get(urlAnimi, headers=headers)
     resp.encoding = 'utf-8'
     main_page = BeautifulSoup(resp.text, "html.parser")
@@ -135,7 +135,7 @@ def downloadPicA(urlAnimi, headers, session):
 
 def downloadPicsA(headers, countA, urlAnimi, session):
     url = urlAnimi + '&page={0}'.format(countA)
-    print("第{0}页开始".format(countA))
+    print("page{0}start".format(countA))
     resp = session.get(url, headers=headers)
     resp.encoding = 'utf-8'
     main_page = BeautifulSoup(resp.text, "html.parser")
